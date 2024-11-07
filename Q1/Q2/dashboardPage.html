@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body id="taskContainer">
+    <div class="dashborde-container">
+      <header class="header-container">
+        <h1>Task Dashboard</h1>
+        <input type="text" id="search" placeholder="Search tasks..." />
+      </header>
+
+      <div class="board">
+        <div class="section" id="inProgress">
+          <h2>In Progress</h2>
+          <button onclick="openTaskModal()" class="btn">New+</button>
+          <div class="tasks" id="inProgressTasks"></div>
+        </div>
+        <div class="section" id="done">
+          <h2>Done</h2>
+          <button onclick="openTaskModal()" class="btn">New+</button>
+          <div class="tasks" id="doneTasks"></div>
+        </div>
+
+        <div class="section" id="willBeDone">
+          <h2>Will Be Done</h2>
+          <button onclick="openTaskModal()" class="btn">New+</button>
+          <div class="tasks" id="willBeDoneTasks"></div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="taskModal" style="display: none">
+      <form id="taskForm">
+        <div class="input">
+          <label for="taskTitle">title:</label>
+          <input type="text" id="taskTitle" placeholder="Task Title" required />
+        </div>
+
+        <div class="input">
+          <label for="taskDescription">Description:</label>
+          <textarea
+            id="taskDescription"
+            placeholder="Task Description"
+            required
+          ></textarea>
+        </div>
+
+        <div class="input">
+          <label for="taskDueDate">Date:</label>
+          <input type="date" id="taskDueDate" required />
+        </div>
+
+        <div class="input">
+          <label for="taskPerformer">taskPerformer:</label>
+          <input
+            type="text"
+            id="taskPerformer"
+            placeholder="Task Performer"
+            required
+          />
+        </div>
+        <div class="input">
+          <select id="taskStatus" required>
+            <option value="done">Done</option>
+            <option value="inProgress">In Progress</option>
+            <option value="willBeDone">Will Be Done</option>
+          </select>
+        </div>
+
+        <div class="button">
+          <button type="submit" class="btnn">Save Task</button>
+          <button type="button" onclick="closeTaskModal()" class="btnn">
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Trello UI</title>
+  </head>
+  <body> -->
+<!-- <div class="container">
+      <div class="column" id="in-progress">
+        <h2>In Progress</h2>
+        <div class="task" draggable="true">
+          <h2 class="task">task 1</h2>
+          <div class="description">
+            <h4>TaskDiscripttion:</h4>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+        <div class="task" draggable="true">
+          <h2 class="task">task 2</h2>
+          <div class="description">
+            <h4>TaskDiscripttion:</h4>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div> -->
+<!-- </div>
+        <button type="submit" class="AddCard" id="AddCard">+ Add Card</button>
+        <div class="task" draggable="true">Task 2</div>
+      </div>
+      <div class="column" id="doing">
+        <h2>Doing</h2>
+        <div class="task" draggable="true">Task 3</div>
+      </div>
+      <div class="column" id="done">
+        <h2>Done</h2>
+        <div class="task" draggable="true">Task 4</div>
+      </div>
+    </div> -->
+<!-- <div class="modal-overlay hide">
+      <div class="modal-wrapper">
+        <div class="close-btn-wrapper">
+          <button class="close-modal-btn">Close</button>
+        </div>
+        <div class="modal-title">
+          <label for="title">title:</label> -->
+<!-- <input type="text" />
+        </div>
+        <div class="modal-description">
+          <label for="description">description:</label>
+          <textarea id="description"></textarea>
+        </div>
+        <div class="modal-createDate">
+          <label for="date">date createdAt:</label>
+          <input type="date" id="date" />
+        </div>
+        <div class="modal-dueDate">
+          <label for="dueDate">duedate:</label>
+          <input type="date" id="dueDate" />
+        </div>
+        <div class="modal-user">
+          <label for="user">user:</label>
+          <input type="date" id="user" />
+        </div>
+        <div> -->
+<!-- <select id="task-status">
+            <option value="done">Done</option>
+            <option value="in-progress">In Progress</option>
+            <option value="will-be-done">Will Be Done</option>
+          </select>
+        </div>
+        <div class="modal-content">Greetings from GeeksforGeeks</div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html> -->
